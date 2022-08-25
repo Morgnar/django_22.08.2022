@@ -4,4 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 
 def listview(request):
-    return HttpResponse("Lista Ksiazek")
+    return render(
+        request,
+        "books/books_template.html",
+        {"dane": "Dane: Lista ksiazek, ksiazkowe informacje"}
+    )

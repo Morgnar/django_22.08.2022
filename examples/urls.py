@@ -17,14 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 from books.views import listview
-from posts.views import listview as postslistview
-from main.views import homepage, greetings
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("main.urls")),
-    path("books/", listview),
-    path("posts/", postslistview),
-
+    path("", include("books.urls")),
+    path("posts/", include("posts.urls")),
 
 ]
