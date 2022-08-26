@@ -5,10 +5,18 @@
     <title>Home</title>
 </head>
 <body>
+{% include 'includes/header.html' %} {# include to jest 'tag' #}
+
 <h1> HOMEPAGE </h1>
 <p> Szablon z aplikacji </p>
 
 {{dane}}
- 
+
+{%for el in dane%} {# for to jest takze 'tag' #}
+    <p> {{el}} </p>
+{% endfor %}
+{% include 'includes/footer.html' %}
+
+
 </body>
 </html> 
