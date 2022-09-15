@@ -1,12 +1,9 @@
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-{% include 'includes/header.html' %} {# include to jest 'tag' #}
 
+{% extends 'base.html' %}
+
+{% block title%} Main !! {{ block.super }}  {% endblock %}
+
+{% block content %}
 <h1> HOMEPAGE </h1>
 <p> Szablon z aplikacji </p>
 
@@ -15,8 +12,9 @@
 {%for el in dane%} {# for to jest takze 'tag' #}
     <p> {{el}} </p>
 {% endfor %}
-{% include 'includes/footer.html' %}
 
+    {{'jakis tekst'|upper}} <!-- Powieksza litery -->
+<br>
+    {{'Ala ma kota, kot ma Alę'|upper|truncatewords:"4"}}  <!-- Obcina tekst to zadanej wartosci słów -->
 
-</body>
-</html> 
+{% endblock %}
