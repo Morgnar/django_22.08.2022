@@ -1,5 +1,5 @@
-
 {% extends 'base.html' %}
+{% load books_extras %}
 
 {% block title%} Main !! {{ block.super }}  {% endblock %}
 
@@ -16,5 +16,16 @@
     {{'jakis tekst'|upper}} <!-- Powieksza litery -->
 <br>
     {{'Ala ma kota, kot ma Alę'|upper|truncatewords:"4"}}  <!-- Obcina tekst to zadanej wartosci słów -->
+
+<br>
+    {{"Dupa JASIU"|to_lower }}
+
+    <br>
+
+    {{"ABRAKADABRA LEWE OKO PROROKA"|to_lower|cut:"lewe"}}  <!-- CUT - to nasz custom filter  -->
+
+    <br>
+
+     {% current_time %}
 
 {% endblock %}
