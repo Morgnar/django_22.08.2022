@@ -19,3 +19,6 @@ def to_lower(value): # Only one argument.
 @register.simple_tag
 def current_time():
     return datetime.datetime.now().isoformat()
+
+
+
